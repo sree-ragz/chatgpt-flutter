@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'constant.dart';
 import 'model.dart';
 
 void main() {
@@ -77,12 +78,12 @@ class _ChatPageState extends State<ChatPage> {
         title: const Padding(
           padding: EdgeInsets.all(8.0),
           child: Text(
-            "OpenAI's ChatGPT Flutter Example \n@ngjunya",
+            "Kunnamkulam GPT",
             maxLines: 2,
             textAlign: TextAlign.center,
           ),
         ),
-        backgroundColor: botBackgroundColor,
+        backgroundColor:Colors.deepPurple,
       ),
       backgroundColor: backgroundColor,
       body: SafeArea(
@@ -123,7 +124,8 @@ class _ChatPageState extends State<ChatPage> {
         child: IconButton(
           icon: const Icon(
             Icons.send_rounded,
-            color: Color.fromRGBO(142, 142, 160, 1),
+            //color: Color.fromRGBO(142, 142, 160, 1),
+            color: Colors.white,
           ),
           onPressed: () async {
             setState(
@@ -168,7 +170,7 @@ class _ChatPageState extends State<ChatPage> {
         style: const TextStyle(color: Colors.white),
         controller: _textController,
         decoration: const InputDecoration(
-          fillColor: botBackgroundColor,
+          fillColor: Colors.deepPurple,
           filled: true,
           border: InputBorder.none,
           focusedBorder: InputBorder.none,
@@ -226,11 +228,12 @@ class ChatMessageWidget extends StatelessWidget {
                   margin: const EdgeInsets.only(right: 16.0),
                   child: CircleAvatar(
                     backgroundColor: const Color.fromRGBO(16, 163, 127, 1),
-                    child: Image.asset(
-                      'assets/bot.png',
-                      color: Colors.white,
-                      scale: 1.5,
-                    ),
+                    // child: Image.asset(
+                    //   'assets/bot.jpg',
+                    //   color: Colors.white,
+                    //   scale: 1.5,
+                    // ),
+                    child: Icon(Icons.android),
                   ),
                 )
               : Container(
